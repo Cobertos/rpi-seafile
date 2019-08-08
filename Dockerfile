@@ -1,4 +1,4 @@
-FROM hypriot/rpi-alpine-scratch:v3.2
+FROM balenalib/rpi-debian:20190717
 
 ADD https://github.com/haiwen/seafile-rpi/releases/download/v7.0.4/seafile-server_7.0.4_stable_pi.tar.gz /usr/local/bin
 
