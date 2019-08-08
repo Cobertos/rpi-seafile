@@ -5,7 +5,7 @@ ADD https://github.com/haiwen/seafile-rpi/releases/download/v7.0.4/seafile-serve
 WORKDIR /usr/local/bin
 RUN tar -xzvf seafile-server_7.0.4_stable_pi.tar.gz && rm seafile-server_7.0.4_stable_pi.tar.gz
 
-ENTRYPOINT ["/usr/local/bin/seafile-server_7.0.4/seafile.sh", "start"]
+ENTRYPOINT ["/usr/local/bin/seafile-server-7.0.4/seafile.sh", "start"]
 VOLUME ["/opt/seafile-data"]
 EXPOSE 80 443
 
