@@ -2,7 +2,7 @@ FROM balenalib/rpi-debian:20190717
 
 # Install related packages
 RUN apt-get update && \
-    apt get install python2 sqlite3 wget
+    apt-get install python2 sqlite3 wget
 
 # Preferrable to ADD because we can remove the .tar.gz in one
 # step and not have it committed to the Dockerfile "layer"
