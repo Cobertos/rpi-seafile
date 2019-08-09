@@ -1,8 +1,11 @@
 FROM balenalib/rpi-debian:20190717
 
-# Install related packages
+# Install related packages (pip and other dev deps for compiling pillow)
+#(certifi and idna are specifically called out in seafile-rpi release https://github.com/haiwen/seafile-rpi/releases/tag/v7.0.4)
 RUN apt-get update && \
-    apt-get install python2 sqlite3 wget
+    apt-get install python2 sqlite3 wget \
+            pythonpip2 python2-dev build-essential libjpeg-dev libtiff-dev libfreetype6-dev && \
+    pip install pillow certifi idna
 
 # Preferrable to ADD because we can remove the .tar.gz in one
 # step and not have it committed to the Dockerfile "layer"
