@@ -20,6 +20,8 @@ docker run -d --name seafile \
   -e SEAFILE_ADMIN_PASSWORD=a_very_secret_password \
   -v "seafile:/usr/local/bin/seafile-data" \
   -p 80:80 \
+  -p 443:443 \
+  -p 8082:8082 \
   --restart=always \
   IMAGE_HERE
 ```
